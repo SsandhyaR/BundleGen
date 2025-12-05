@@ -81,6 +81,17 @@
             ],
             "type": "bind"
         },
+        {
+            "source": "/usr/lib/libethanlog.so.3",
+            "destination": "/usr/lib/libethanlog.so.3",
+            "options": [
+                "rbind",
+                "nosuid",
+                "nodev",
+                "ro"
+            ],
+            "type": "bind"
+        },
        {
             "source": "tmpfs",
             "destination": "/tmp",
