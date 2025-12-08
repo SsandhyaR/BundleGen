@@ -463,10 +463,11 @@ class BundleProcessor:
             else:
                 dobbyinitpath = '/usr/libexec/DobbyInit'
             args = self.oci_config['process']['args']
+
             new_args = []
             for item in args:
+                item = item.replace('\\@', ' ')
                 if ' ' in item:
-                    item = item.replace('\\@', ' ')
                     new_args.extend(shlex.split(item))
                 else:
                     new_args.append(item)
